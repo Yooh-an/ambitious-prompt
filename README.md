@@ -17,7 +17,15 @@ You give it one task. It gives back:
 
 ## Reference
 
-This skill turns the framework in **Felix Rieseberg's essay [“How to be more ambitious: A tutorial for humans with models”](https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/)** (October 2026) into a repeatable procedure.
+This skill turns the framework from **[Felix Rieseberg's post on X](https://x.com/felixrieseberg/status/2110023283169247623)** (Oct 14, 2026) into a repeatable procedure. The post introduces his essay [“How to be more ambitious: A tutorial for humans with models”](https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/).
+
+<p align="center">
+  <a href="https://x.com/felixrieseberg/status/2110023283169247623">
+    <img src="docs/x-post.jpg" alt="Felix Rieseberg on X: introducing the tutorial 'How to be more ambitious: A tutorial for humans with models'" width="460">
+  </a>
+  <br>
+  <sub>Source: <a href="https://x.com/felixrieseberg/status/2110023283169247623">x.com/felixrieseberg/status/2110023283169247623</a>. Screenshot taken Oct 16, 2026.</sub>
+</p>
 
 The essay names four kinds of ambition to apply when working with models:
 
@@ -209,7 +217,8 @@ ambitious-prompt/
 ├── README.md
 ├── LICENSE
 ├── docs/
-│   └── pipeline.svg              # the diagram above (light/dark aware)
+│   ├── pipeline.svg              # the diagram above (light/dark aware)
+│   └── x-post.jpg                # screenshot of the source post
 └── skills/
     └── ambitious-prompt/         # ← copy this folder into .claude/skills/
         ├── SKILL.md              # workflow, axis signals, ladder, rubric, output contract
