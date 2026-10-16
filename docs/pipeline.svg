@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="760" viewBox="0 0 680 760" role="img" aria-labelledby="title desc">
+<title id="title">ambitious-prompt skill pipeline</title>
+<desc id="desc">A raw prompt goes through intake and a trivial-task gate, then axis diagnosis into Altitude, Depth and Range. These feed a three-level prompt ladder, which passes a rubric gate before output. Axis references are loaded on demand.</desc>
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+.th { font-size: 14px; font-weight: 600; fill: #1f2328; }
+.ts { font-size: 12px; fill: #59636e; }
+.box { fill: #f6f8fa; stroke: #8c959f; }
+.frame { fill: none; stroke: #8c959f; }
+.arr { stroke: #8c959f; stroke-width: 1.5; fill: none; }
+.leader { stroke: #8c959f; stroke-width: 1; stroke-dasharray: 3 3; fill: none; }
+.mk { stroke: #8c959f; }
+.p rect, rect.p { fill: #EEEDFE; stroke: #534AB7; }
+.p .th { fill: #3C3489; } .p .ts, .pt { fill: #534AB7; }
+.g rect, rect.g { fill: #E1F5EE; stroke: #0F6E56; }
+.g .th { fill: #085041; } .g .ts { fill: #0F6E56; }
+@media (prefers-color-scheme: dark) {
+  .th { fill: #e6edf3; } .ts { fill: #9198a1; }
+  .box { fill: #161b22; stroke: #6e7681; }
+  .frame, .arr, .leader, .mk { stroke: #6e7681; }
+  .p rect, rect.p { fill: #3C3489; stroke: #AFA9EC; }
+  .p .th { fill: #EEEDFE; } .p .ts, .pt { fill: #CECBF6; }
+  .g rect, rect.g { fill: #085041; stroke: #5DCAA5; }
+  .g .th { fill: #E1F5EE; } .g .ts { fill: #9FE1CB; }
+}
+</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="mk" d="M2 1L8 5L2 9" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<rect class="box" x="80" y="30" width="280" height="56" rx="8" stroke-width="0.75"/>
+<text class="th" x="220" y="52" text-anchor="middle">Raw task prompt</text>
+<text class="ts" x="220" y="72" text-anchor="middle">Task, materials, purpose</text>
+<line x1="220" y1="86" x2="220" y2="114" class="arr" marker-end="url(#arrow)"/>
+
+<rect class="box" x="80" y="116" width="280" height="56" rx="8" stroke-width="0.75"/>
+<text class="th" x="220" y="138" text-anchor="middle">Intake</text>
+<text class="ts" x="220" y="158" text-anchor="middle">At most 2 clarifying questions</text>
+<line x1="220" y1="172" x2="220" y2="200" class="arr" marker-end="url(#arrow)"/>
+
+<rect class="box" x="80" y="202" width="280" height="56" rx="8" stroke-width="0.75"/>
+<text class="th" x="220" y="224" text-anchor="middle">Trivial task?</text>
+<text class="ts" x="220" y="244" text-anchor="middle">One step, no decision</text>
+<text class="ts" x="400" y="222" text-anchor="middle">yes</text>
+<line x1="360" y1="230" x2="438" y2="230" class="arr" marker-end="url(#arrow)"/>
+<rect class="box" x="440" y="202" width="200" height="56" rx="8" stroke-width="0.75" stroke-dasharray="4 3"/>
+<text class="th" x="540" y="224" text-anchor="middle">Return as-is</text>
+<text class="ts" x="540" y="244" text-anchor="middle">One tightened prompt</text>
+<text class="ts" x="230" y="278">no</text>
+<line x1="220" y1="258" x2="220" y2="286" class="arr" marker-end="url(#arrow)"/>
+
+<rect class="box" x="80" y="288" width="280" height="56" rx="8" stroke-width="0.75"/>
+<text class="th" x="220" y="310" text-anchor="middle">Diagnose axes</text>
+<text class="ts" x="220" y="330" text-anchor="middle">Score H / M / L, pick 1–2</text>
+<line x1="180" y1="344" x2="110" y2="372" class="arr" marker-end="url(#arrow)"/>
+<line x1="220" y1="344" x2="220" y2="372" class="arr" marker-end="url(#arrow)"/>
+<line x1="260" y1="344" x2="330" y2="372" class="arr" marker-end="url(#arrow)"/>
+
+<g class="p">
+<rect x="40" y="374" width="110" height="56" rx="8" stroke-width="0.75"/>
+<text class="th" x="95" y="396" text-anchor="middle">Altitude</text>
+<text class="ts" x="95" y="416" text-anchor="middle">Aim at outcome</text>
+</g>
+<g class="p">
+<rect x="165" y="374" width="110" height="56" rx="8" stroke-width="0.75"/>
+<text class="th" x="220" y="396" text-anchor="middle">Depth</text>
+<text class="ts" x="220" y="416" text-anchor="middle">Expert methods</text>
+</g>
+<g class="p">
+<rect x="290" y="374" width="110" height="56" rx="8" stroke-width="0.75"/>
+<text class="th" x="345" y="396" text-anchor="middle">Range</text>
+<text class="ts" x="345" y="416" text-anchor="middle">Borrow fields</text>
+</g>
+
+<line class="leader" x1="400" y1="402" x2="440" y2="402"/>
+<rect class="frame" x="440" y="374" width="200" height="186" rx="12" stroke-width="0.75" stroke-dasharray="4 3"/>
+<text class="th" x="456" y="400">references/</text>
+<g class="p">
+<rect x="456" y="412" width="168" height="28" rx="4" stroke-width="0.75"/>
+<text class="ts" x="540" y="430" text-anchor="middle">altitude.md</text>
+<rect x="456" y="446" width="168" height="28" rx="4" stroke-width="0.75"/>
+<text class="ts" x="540" y="464" text-anchor="middle">depth.md</text>
+<rect x="456" y="480" width="168" height="28" rx="4" stroke-width="0.75"/>
+<text class="ts" x="540" y="498" text-anchor="middle">range.md</text>
+<rect x="456" y="514" width="168" height="28" rx="4" stroke-width="0.75"/>
+<text class="ts" x="540" y="532" text-anchor="middle">examples.md</text>
+</g>
+
+<line x1="95" y1="430" x2="95" y2="458" class="arr" marker-end="url(#arrow)"/>
+<line x1="220" y1="430" x2="220" y2="458" class="arr" marker-end="url(#arrow)"/>
+<line x1="345" y1="430" x2="345" y2="458" class="arr" marker-end="url(#arrow)"/>
+
+<rect class="frame" x="40" y="460" width="360" height="100" rx="12" stroke-width="0.75" stroke-dasharray="4 3"/>
+<g class="g">
+<rect x="55" y="482" width="100" height="56" rx="8" stroke-width="0.75"/>
+<text class="th" x="105" y="504" text-anchor="middle">Lv1</text>
+<text class="ts" x="105" y="524" text-anchor="middle">Better task</text>
+</g>
+<g class="g">
+<rect x="170" y="482" width="100" height="56" rx="8" stroke-width="0.75"/>
+<text class="th" x="220" y="504" text-anchor="middle">Lv2</text>
+<text class="ts" x="220" y="524" text-anchor="middle">Outcome</text>
+</g>
+<g class="g">
+<rect x="285" y="482" width="100" height="56" rx="8" stroke-width="0.75"/>
+<text class="th" x="335" y="504" text-anchor="middle">Lv3</text>
+<text class="ts" x="335" y="524" text-anchor="middle">System</text>
+</g>
+<line x1="220" y1="560" x2="220" y2="588" class="arr" marker-end="url(#arrow)"/>
+
+<rect class="box" x="80" y="590" width="280" height="56" rx="8" stroke-width="0.75"/>
+<text class="th" x="220" y="612" text-anchor="middle">Rubric gate</text>
+<text class="ts" x="220" y="632" text-anchor="middle">Hard target, outside judge</text>
+<text class="ts" x="372" y="622">↻ fail: rewrite level</text>
+<line x1="220" y1="646" x2="220" y2="674" class="arr" marker-end="url(#arrow)"/>
+
+<g class="g">
+<rect x="80" y="676" width="280" height="56" rx="8" stroke-width="0.75"/>
+<text class="th" x="220" y="698" text-anchor="middle">Ladder output</text>
+<text class="ts" x="220" y="718" text-anchor="middle">Diagnosis, prompts, pick</text>
+</g>
+
+<rect class="p" x="440" y="682" width="12" height="12" rx="2" stroke-width="0.75"/>
+<text class="ts" x="460" y="692">Axis knowledge, loaded lazily</text>
+<rect class="g" x="440" y="708" width="12" height="12" rx="2" stroke-width="0.75"/>
+<text class="ts" x="460" y="718">Generated prompts</text>
+</svg>
